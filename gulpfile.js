@@ -6,7 +6,7 @@ const {
 } = require('gulp');
 const postcss = require("gulp-postcss");
 const autoprefixer = require('autoprefixer');
-const babel = require('gulp-babel');
+// const babel = require('gulp-babel');
 const del = require('del');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass')(require('sass'));
@@ -14,7 +14,7 @@ const svgSprite = require('gulp-svg-sprite');
 const fileInclude = require('gulp-file-include');
 const sourcemaps = require('gulp-sourcemaps');
 const notify = require('gulp-notify');
-const image = require('gulp-image');
+const imagemin = require('gulp-imagemin');
 const concat = require('gulp-concat');
 const csscomb = require("gulp-csscomb");
 const cleanCSS = require('gulp-clean-css');
@@ -66,9 +66,9 @@ const scripts = () => {
   return src(
       ['./src/js/global.js', './src/js/components/**.js', './src/js/main.js'])
     .pipe(sourcemaps.init())
-    .pipe(babel({
-      presets: ['@babel/env']
-    }))
+    // .pipe(babel({
+    //   presets: ['@babel/env']
+    // }))
     .pipe(concat('main.js'))
     .pipe(sourcemaps.write('.'))
     .pipe(dest('./build/js'))
@@ -90,7 +90,15 @@ const images = () => {
       './src/img/**/*.png',
       './src/img/**/*.jpeg'
     ])
-    .pipe(image())
+    .pipe(imagemin([
+      imagemin.optipng({
+        optimizationLevel: 3
+      }),
+      imagemin.mozjpeg({
+        progressive: true
+      }),
+      imagemin.svgo()
+    ]))
     .pipe(dest('./build/img'))
 };
 
