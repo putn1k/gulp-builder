@@ -1,7 +1,7 @@
 # игнорировать файлы и каталоги сборки и зависимостей
-/build/
-/node_modules/
-/package-lock.json
+build/
+node_modules/
+package-lock.json
 
 # игнорировать файлы, созданные ОС
 ehthumbs.db
