@@ -1,14 +1,12 @@
 // COLORS
-$white: #ffffff;
-$black: #000000;
-
-//BREAKPOINTS FOR DESKTOP FIRST
-// $tablet: 1023px;
-// $mobile: 767px;
+$white: #FFFFFF;
+$black: #040F0F;
 
 //BREAKPOINTS FOR MOBILE FIRST
-$tablet: 768px;
-$desktop: 1024px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
 
-// WIDTH
-$container: 1200px;
+// Fonts
+$main-font: "Open Sans";

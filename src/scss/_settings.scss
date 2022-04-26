@@ -1,4 +1,4 @@
-//GLOBAL STYLES
+// GLOBAL STYLES
 html {
   box-sizing: border-box;
 }
@@ -10,8 +10,11 @@ html {
 }
 
 body {
+  font-family: $main-font, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.3;
   min-width: 360px;
-  margin: 0;
 }
 
 img {
@@ -22,36 +25,8 @@ img {
 a {
   color: inherit;
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
-p {
-  margin: 0;
-}
-
-ul,
-ol {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-button {
-  border: none;
-  background: transparent;
-  padding: 0;
-  color: inherit;
-}
-
-//GLOBAL CLASSES
 
 .visually-hidden:not(:focus):not(:active),
 input[type="radio"].visually-hidden,
@@ -72,11 +47,8 @@ input[type="checkbox"].visually-hidden {
   outline: none;
 }
 
-// container not bootstrap
-.container-nbs {
-  margin: 0 auto;
-  padding: 0 10px;
-  max-width: $container;
+.site-container {
+  overflow: hidden;
 }
 
 .is-open-menu {
@@ -87,17 +59,25 @@ input[type="checkbox"].visually-hidden {
   display: none;
 }
 
-//GLOBAL TYPOGRAPHICS
-// body {
-//   font-family: 'Roboto', Arial, Helvetica, sans-serif;
-//   font-size: 16px;
-//   line-height: 1.3;
-//   font-weight: 400;
-//   color: $black;
-//   background-color: $white;
-// }
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
 
-// .h1 {}
-// .h2 {}
-// .h3 {}
-// .h4 {}
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.indent-reset {
+  margin: 0;
+  padding: 0;
+}
+
+@import "blocks/typogrpahics";
+@import "blocks/form";
+@import "blocks/buttons";

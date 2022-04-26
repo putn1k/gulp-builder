@@ -1,1 +1,2 @@
-const da=new DynamicAdapt("min");da.init();
+const da = new DynamicAdapt("min");
+da.init();
