@@ -1,69 +1,15 @@
-# игнорировать все файлы, начинающиеся с . или ~
-.*
-~*
-
 # игнорировать файлы и каталоги сборки и зависимостей
-build/
-node_modules/
-package-lock.json
+/build/
+/node_modules/
+/package-lock.json
 
 # игнорировать файлы, созданные ОС
 ehthumbs.db
 Thumbs.db
+*.DS_Store
 
-# ignore Editor files
+# игнорировать файлы настроек редакторов
+/.idea/
 *.sublime-project
 *.sublime-workspace
 *.komodoproject
-*.DS_Store
-
-# игнорировать файлы журналов и базы данных
-*.log
-*.sql
-*.sqlite
-
-# игнорировать скомпилированные файлы
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
-
-# игнорировать упакованные файлы
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
-
-# игнорировать прочие файлы
-*.xml
-
-# -------------------------
-# Файлы из белого списка
-# -------------------------
-
-# отслеживать эти файлы и папки, если они существуют
-!src/
-!gulpfile.js
-!package.json
-!.editorconfig
-!.gitignore
-!.csscomb.json
-!README.md
-!CHANGELOG.md
-!composer.json
-
-# отслеживать файлы favicon, если они существуют
-!android-chrome-*.png
-!apple-touch-icon*.png
-!browserconfig.xml
-!favicon*.png
-!favicon*.ico
-!manifest.json
-!mstile-*.png
-!safari-pinned-tab.svg
