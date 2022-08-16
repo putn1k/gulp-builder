@@ -1,11 +1,11 @@
-const myModal = new HystModal({
+const initModal = (name, handler) => {
+  name.config.linkAttributeName = handler;
+  name.init();
+}
+const basedModalOptions = {
   linkAttributeName: false,
   catchFocus: true,
   closeOnEsc: true,
   backscroll: true,
-});
-
-(function initModal() {
-  myModal.config.linkAttributeName = 'data-hystmodal';
-  myModal.init();
-})();
+};
+const simpleModal = new HystModal(basedModalOptions);

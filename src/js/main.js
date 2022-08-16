@@ -1,0 +1,1 @@
+initModal(simpleModal, 'data-hystmodal');
