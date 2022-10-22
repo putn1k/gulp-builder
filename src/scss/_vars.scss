@@ -2,6 +2,13 @@
 $white: #FFFFFF;
 $black: #040F0F;
 
+$blue: #4d5acf;
+$accent: $blue;
+
+:root {
+  --accent: #4d5acf;
+}
+
 //BREAKPOINTS FOR MOBILE FIRST
 $sm: 576px;
 $md: 768px;
@@ -10,3 +17,18 @@ $xl: 1200px;
 
 // Fonts
 $main-font: "Open Sans";
+
+$fz-large: 28px;
+$fz-small: 14px;
+$fz-h1: 24px;
+$fz-h2: 20px;
+$fz-h3: 18px;
+$fz-h4: 18px;
+
+@media (min-width: $xl) {
+  $fz-large: 34px;
+  $fz-h1: 28px;
+  $fz-h2: 24px;
+  $fz-h3: 20px;
+  $fz-h4: 20px;
+}
