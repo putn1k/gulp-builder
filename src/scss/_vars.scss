@@ -18,17 +18,9 @@ $xl: 1200px;
 // Fonts
 $main-font: "Open Sans";
 
-$fz-large: 28px;
-$fz-small: 14px;
-$fz-h1: 24px;
-$fz-h2: 20px;
-$fz-h3: 18px;
-$fz-h4: 18px;
-
-@media (min-width: $xl) {
-  $fz-large: 34px;
-  $fz-h1: 28px;
-  $fz-h2: 24px;
-  $fz-h3: 20px;
-  $fz-h4: 20px;
-}
+$font-hd: 28px;
+$font-h1: 24px;
+$font-h2: 20px;
+$font-h3: 18px;
+$font-h4: 18px;
+$font-sm: 14px;
